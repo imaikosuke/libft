@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:29:12 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/25 19:03:44 by koimai           ###   ########.fr       */
+/*   Updated: 2023/09/26 19:32:50 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 // mallocをしている途中にエラーが発生した場合それまでのメモリをfreeしなければいけない
-void	free_str(char const *str, char *word, int i)
-{
-	return ;
-}
+// void	free_str(char const *str, char *word, int i)
+// {
+// 	return ;
+// }
 
 int	count_strings(char const *str, char charset)
 {

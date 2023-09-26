@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 12:09:45 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/21 17:36:58 by koimai           ###   ########.fr       */
+/*   Updated: 2023/09/26 19:17:38 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_atoi(const char *str)
 	flag = 1;
 	while (str[i] == ' ' || ('\t' <= str[i] && str[i] <= '\r'))
 		i++;
-	while (str[i] == '-' || str[i] == '+')
+	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
 			flag *= -1;
@@ -37,11 +37,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * flag);
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-// 	const char test[] = "  		2147483647";
-// 	int result = ft_atoi(test);
-// 	printf("result: %d\n", result);
-// }
