@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:35:31 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/22 16:57:24 by koimai           ###   ########.fr       */
+/*   Updated: 2023/09/26 17:40:45 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,15 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	const char	*result;
-	int			i;
+	size_t	len;
 
-	i = 0;
-	while (str[i] != '\0')
+	c &= 255;
+	len = ft_strlen(str) + 1;
+	while (0 < len)
 	{
-		if (str[i] == (char)c)
-			result = &str[i];
-		i++;
+		len--;
+		if (str[len] == c)
+			return ((char *)&str[len]);
 	}
-	if (result != NULL)
-		return ((char *)result);
 	return (NULL);
 }
-
-// #include <stdio.h>
-// int main() {
-//     const char *str = "Hello, World!";
-//     int ch = 'o';
-
-//     // custom_strrchr関数の使用例
-//     char *result = ft_strrchr(str, ch);
-//     if (result != NULL) {
-//         printf("Character '%c' found at position: %ld\n", ch, result - str);
-//     } else {
-//         printf("Character '%c' not found.\n", ch);
-//     }
-
-//     return 0;
-// }
