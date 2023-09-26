@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 11:29:09 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/22 19:41:19 by koimai           ###   ########.fr       */
+/*   Updated: 2023/09/26 10:52:37 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 19:46:35 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/25 19:47:04 by koimai           ###   ########.fr       */
+/*   Updated: 2023/09/26 10:53:23 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	return ;
+	write(fd, &c, 1);
 }
