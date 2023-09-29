@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:29:12 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/26 19:32:50 by koimai           ###   ########.fr       */
+/*   Updated: 2023/09/29 01:24:07 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,35 +96,35 @@ char	**ft_split(char const *str, char charset)
 	return (strings);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int	main(int argc, char **argv)
-{
-	int		index;
-	char	**split;
+// int	main(int argc, char **argv)
+// {
+// 	int		index;
+// 	char	**split;
 
-	if (argc == 3)
-	{
-		(void)argc;
-		split = ft_split(argv[1], *argv[2]);
-		if (split == NULL)
-		{
-			free(split);
-			return (0);
-		}
-		index = 0;
-		while (split[index])
-		{
-			printf("%s\n", split[index]);
-			index++;
-		}
-		index = 0;
-		while (split[index])
-		{
-			free(split[index]);
-			index++;
-		}
-		free(split);
-	}
-	return (0);
-}
+// 	if (argc == 3)
+// 	{
+// 		(void)argc;
+// 		split = ft_split(argv[1], *argv[2]);
+// 		if (split == NULL)
+// 		{
+// 			free(split);
+// 			return (0);
+// 		}
+// 		index = 0;
+// 		while (split[index])
+// 		{
+// 			printf("%s\n", split[index]);
+// 			index++;
+// 		}
+// 		index = 0;
+// 		while (split[index])
+// 		{
+// 			free(split[index]);
+// 			index++;
+// 		}
+// 		free(split);
+// 	}
+// 	return (0);
+// }

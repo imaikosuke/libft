@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:37:07 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/22 17:12:55 by koimai           ###   ########.fr       */
+/*   Updated: 2023/09/29 16:44:54 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,15 @@
 
 void	*ft_calloc(size_t num_elements, size_t element_size)
 {
-	size_t			total_size;
-	void			*mem;
-	unsigned char	*byte_ptr;
-	size_t			i;
+	size_t	total_size;
+	void	*dest;
 
 	total_size = num_elements * element_size;
-	mem = malloc(total_size);
-	if (mem != NULL)
-	{
-		byte_ptr = (unsigned char *)mem;
-		i = 0;
-		while (i < total_size)
-		{
-			byte_ptr[i] = 0;
-			i++;
-		}
-	}
-	return (mem);
+	dest = malloc(total_size);
+	if (!dest)
+		return (NULL);
+	ft_memset(dest, 0, total_size);
+	return (dest);
 }
 
 // #include <stdio.h>
