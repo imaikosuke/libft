@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 18:38:41 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/21 20:42:04 by koimai           ###   ########.fr       */
+/*   Updated: 2023/09/29 18:51:06 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (byte_ptr1[i] < byte_ptr2[i])
-			return (-1);
-		else if (byte_ptr1[i] > byte_ptr2[i])
-			return (1);
+		if (((unsigned char *)byte_ptr1)[i] != ((unsigned char *)byte_ptr2)[i])
+			return (((unsigned char *)byte_ptr1)[i] - ((unsigned char *)byte_ptr2)[i]);
 		i++;
 	}
 	return (0);
