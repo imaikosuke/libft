@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:29:12 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/30 17:56:13 by koimai           ###   ########.fr       */
+/*   Updated: 2023/09/30 22:20:04 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,10 +92,8 @@ int	set_str(char const *str, char charset, char **strings, int *word_index)
 char	**ft_split(char const *str, char charset)
 {
 	int			word_index;
-	int			i;
 	char		**strings;
 
-	i = 0;
 	word_index = 0;
 	strings = (char **)malloc((count_strings(str, charset) + 1)
 			* sizeof(char *));
