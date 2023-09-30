@@ -6,17 +6,24 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:29:12 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/30 14:36:19 by koimai           ###   ########.fr       */
+/*   Updated: 2023/09/30 17:56:13 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// mallocをしている途中にエラーが発生した場合それまでのメモリをfreeしなければいけない
-// void	free_str(char const *str, char *word, int i)
-// {
-// 	return ;
-// }
+void	free_str(char **strings)
+{
+	int	c;
+
+	c = 0;
+	while (strings[c] == NULL)
+	{
+		free(strings[c]);
+		c++;
+	}
+	free(strings);
+}
 
 int	count_strings(char const *str, char charset)
 {
@@ -37,27 +44,19 @@ int	count_strings(char const *str, char charset)
 	return (count);
 }
 
-int	ft_strlen_sep(char const *str, char charset)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] && str[i] != charset)
-		i++;
-	return (i);
-}
-
 char	*ft_word(char const *str, char charset)
 {
 	int		len;
 	int		i;
 	char	*word;
 
-	i = 0;
-	len = ft_strlen_sep(str, charset);
+	len = 0;
+	while (str[len] && str[len] != charset)
+		len++;
 	word = (char *)malloc((len + 1) * sizeof(char));
 	if (word == NULL)
 		return (NULL);
+	i = 0;
 	while (i < len)
 	{
 		word[i] = str[i];
@@ -67,10 +66,32 @@ char	*ft_word(char const *str, char charset)
 	return (word);
 }
 
+int	set_str(char const *str, char charset, char **strings, int *word_index)
+{
+	int			i;
+	char const	*start;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		while (str[i] != '\0' && str[i] == charset)
+			i++;
+		if (str[i] != '\0')
+		{
+			start = &str[i];
+			strings[*word_index] = ft_word(start, charset);
+			if (strings[(*word_index)++] == NULL)
+				return (1);
+			while (str[i] != '\0' && str[i] != charset)
+				i++;
+		}
+	}
+	return (0);
+}
+
 char	**ft_split(char const *str, char charset)
 {
 	int			word_index;
-	char const	*start;
 	int			i;
 	char		**strings;
 
@@ -80,17 +101,10 @@ char	**ft_split(char const *str, char charset)
 			* sizeof(char *));
 	if (strings == NULL)
 		return (NULL);
-	while (str[i] != '\0')
+	if (set_str(str, charset, strings, &word_index) == 1)
 	{
-		while (str[i] != '\0' && str[i] == charset)
-			i++;
-		if (str[i] != '\0')
-		{
-			start = &str[i];
-			strings[word_index++] = ft_word(start, charset);
-		}
-		while (str[i] != '\0' && str[i] != charset)
-			i++;
+		free_str(strings);
+		return (NULL);
 	}
 	strings[word_index] = NULL;
 	return (strings);
