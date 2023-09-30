@@ -3,14 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 12:09:45 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/29 22:42:10 by koimai           ###   ########.fr       */
+/*   Updated: 2023/09/30 12:35:54 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	check_long(int flag, long num, int digit)
+{
+	if (flag == 1)
+	{
+		if ((num == 922337203685477580 && '8' <= digit)
+			|| 922337203685477581 <= num)
+			return (1);
+	}
+	else if (flag == -1)
+	{
+		if ((num == 922337203685477580 && '9' <= digit)
+			|| 922337203685477581 <= num)
+			return (-1);
+	}
+	return (0);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -29,11 +46,14 @@ int	ft_atoi(const char *str)
 			flag *= -1;
 		i++;
 	}
-	while ('0' <= str[i] && str[i] <= '9' && LONG_MIN <= result && result <= LONG_MAX)
+	while ('0' <= str[i] && str[i] <= '9')
 	{
-		result *= 10;
-		result += str[i] - '0';
+		if (check_long(flag, result, str[i]) == 1)
+			return ((int)LONG_MAX);
+		else if (check_long(flag, result, str[i]) == -1)
+			return ((int)LONG_MIN);
+		result = (result * 10) + str[i] - '0';
 		i++;
 	}
-	return (((int)result) * flag);
+	return ((int)result * flag);
 }
