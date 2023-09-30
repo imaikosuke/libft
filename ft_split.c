@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:29:12 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/29 01:24:07 by koimai           ###   ########.fr       */
+/*   Updated: 2023/09/30 14:36:19 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ int	count_strings(char const *str, char charset)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		while (str[i] != '\0' && str[i] != charset)
+		while (str[i] != '\0' && str[i] == charset)
 			i++;
 		if (str[i] != '\0')
 			count++;
-		while (str[i] != '\0' && str[i] == charset)
+		while (str[i] != '\0' && str[i] != charset)
 			i++;
 	}
 	return (count);
@@ -98,33 +98,29 @@ char	**ft_split(char const *str, char charset)
 
 // #include <stdio.h>
 
-// int	main(int argc, char **argv)
+// int	main()
 // {
 // 	int		index;
 // 	char	**split;
 
-// 	if (argc == 3)
+// 	split = ft_split(" Tripouille ", ' ');
+// 	if (split == NULL)
 // 	{
-// 		(void)argc;
-// 		split = ft_split(argv[1], *argv[2]);
-// 		if (split == NULL)
-// 		{
-// 			free(split);
-// 			return (0);
-// 		}
-// 		index = 0;
-// 		while (split[index])
-// 		{
-// 			printf("%s\n", split[index]);
-// 			index++;
-// 		}
-// 		index = 0;
-// 		while (split[index])
-// 		{
-// 			free(split[index]);
-// 			index++;
-// 		}
 // 		free(split);
+// 		return (0);
 // 	}
+// 	index = 0;
+// 	while (split[index])
+// 	{
+// 		printf("%s\n", split[index]);
+// 		index++;
+// 	}
+// 	index = 0;
+// 	while (split[index])
+// 	{
+// 		free(split[index]);
+// 		index++;
+// 	}
+// 	free(split);
 // 	return (0);
 // }
