@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 18:52:15 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/29 23:31:42 by koimai           ###   ########.fr       */
+/*   Updated: 2023/09/30 12:46:21 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 		start++;
 	}
-	dest[start] = '\0';
+	dest[len] = '\0';
 	return (dest);
 }
-
-// #include <stdio.h>
-// #include <stdlib.h>
-
-// int main(void)
-// {
-// 	char src[] = "substr fucntion Implementation";
-// 	int start = 7;
-// 	size_t len = 5;
-// 	char *dest = ft_substr(src, start, len);
-// 	printf("test: %s\n", dest);
-// 	free(dest);
-// 	return (0);
-// }
