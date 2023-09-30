@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:37:07 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/30 13:28:54 by koimai           ###   ########.fr       */
+/*   Updated: 2023/09/30 14:39:50 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(dest, total_size);
 	return (dest);
 }
-
