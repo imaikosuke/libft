@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: koimai <koimai@student.42.fr>              +#+  +:+       +#+         #
+#    By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 11:20:10 by koimai            #+#    #+#              #
-#    Updated: 2023/09/26 19:31:55 by koimai           ###   ########.fr        #
+#    Updated: 2023/10/01 14:17:46 by koimai           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,19 @@ SRCS   = 	ft_isalpha.c \
 			ft_putnbr_fd.c
 			
 OBJS   = $(SRCS:.c=.o)
+
+BONUS_SRCS = ft_lstnew.c \
+			 ft_lstadd_front.c \
+			 ft_lstsize.c \
+			 ft_lstlast.c \
+			 ft_lstadd_back.c \
+			 ft_lstdelone.c \
+			 ft_lstclear.c \
+			 ft_lstiter.c \
+			 ft_lstmap.c \
+
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
+
 CC     = cc
 CFLAGS = -Wall -Wextra -Werror
 
@@ -59,7 +72,14 @@ all: $(NAME)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
+
+re:	fclean all
+
+bonus:	$(OBJS) $(BONUS_OBJS)
+	ar rc $(NAME) $(OBJS) $(BONUS_OBJS)
+
+.PHONY: all .c.o clean fclean re bonus
