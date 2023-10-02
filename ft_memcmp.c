@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 18:38:41 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/29 18:51:06 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/02 09:47:12 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// int main() {
-//     char str1[] = "Hello";
-//     char str2[] = "Hello";
-
-//     int result = ft_memcmp(str1, str2, 5);
-//     if (result == 0) {
-//         printf("文字列は等しいです。\n");
-//     } else if (result < 0) {
-//         printf("str1がstr2より小さいです。\n");
-//     } else {
-//         printf("str1がstr2より大きいです。\n");
-//     }
-
-//     return 0;
-// }
