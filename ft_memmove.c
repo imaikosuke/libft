@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:03:35 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/26 16:00:58 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/03 17:54:57 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 
 	tmp = (unsigned char *)dest;
 	s = (unsigned char *)src;
+	if (!tmp && !s)
+		return (NULL);
 	if (dest > src)
 	{
 		while (len-- != 0)
