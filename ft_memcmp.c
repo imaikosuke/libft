@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 18:38:41 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/03 15:12:35 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/03 18:03:24 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	byte_ptr1 = s1;
 	byte_ptr2 = s2;
+	if (!byte_ptr1 && !byte_ptr2)
+		return (0);
 	i = 0;
 	while (i < n)
 	{
