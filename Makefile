@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+         #
+#    By: koimai <koimai@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 11:20:10 by koimai            #+#    #+#              #
-#    Updated: 2023/10/01 14:17:46 by koimai           ###   ########.fr        #
+#    Updated: 2023/10/03 15:59:59 by koimai           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,11 @@ SRCS   = 	ft_isalpha.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c
-			
+
+ifeq ($(MAKECMDGOALS),bonus)
+	SRCS += $(BONUS_SRCS)
+endif
+
 OBJS   = $(SRCS:.c=.o)
 
 BONUS_SRCS = ft_lstnew.c \
@@ -79,7 +83,6 @@ fclean: clean
 
 re:	fclean all
 
-bonus:	$(OBJS) $(BONUS_OBJS)
-	ar rc $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus:	all
 
 .PHONY: all .c.o clean fclean re bonus
