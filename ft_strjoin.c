@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:06:23 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/02 15:27:28 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/03 18:40:43 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	new_str = (char *)malloc((s1_len + s2_len + 1) * sizeof(char));
+	if (!new_str)
+		return (NULL);
 	ft_memcpy(new_str, s1, s1_len);
 	ft_memcpy(new_str + s1_len, s2, s2_len + 1);
 	return (new_str);

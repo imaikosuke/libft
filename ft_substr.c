@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 18:52:15 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/30 12:46:21 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/03 18:43:19 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (size < len)
 		len = size;
 	dest = (char *)malloc((len + 1) * sizeof(char));
-	if (dest == NULL)
+	if (!dest)
 		return (NULL);
 	i = 0;
 	while (i < len && s[start] != '\0')
