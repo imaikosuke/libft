@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 18:38:41 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/02 09:47:12 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/03 15:12:35 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (((unsigned char *)byte_ptr1)[i] != ((unsigned char *)byte_ptr2)[i])
-			return (((unsigned char *)byte_ptr1)[i] - ((unsigned char *)byte_ptr2)[i]);
+			return (((unsigned char *)byte_ptr1)[i]
+				- ((unsigned char *)byte_ptr2)[i]);
 		i++;
 	}
 	return (0);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 11:29:09 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/01 15:00:03 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/03 15:14:31 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,14 +60,14 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-t_list 	*ft_lstnew(void *content);
+t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *list);
 t_list	*ft_lstlast(t_list *list);
 void	ft_lstadd_back(t_list **list, t_list *new);
 void	ft_lstdelone(t_list *list, void (*del)(void *));
 void	ft_lstclear(t_list **list, void (*del)(void *));
-void	ft_lstiter(t_list *list, void(*f)(void *));
+void	ft_lstiter(t_list *list, void (*f)(void *));
 t_list	*ft_lstmap(t_list *list, void *(*f)(void *), void (*del)(void *));
 
 #endif

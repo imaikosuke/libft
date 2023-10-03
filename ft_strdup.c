@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 14:15:20 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/21 14:25:32 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/03 15:06:33 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,3 @@ char	*ft_strdup(char *src)
 	duplicate[i] = '\0';
 	return (duplicate);
 }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	char test[] = "abcdefghijklmn";
-// 	char *d;
-
-// 	d = ft_strdup(test);
-// 	printf("d: %s\n", d);
-// 	return (0);
-// }

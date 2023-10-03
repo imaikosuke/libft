@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 14:50:50 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/01 14:52:15 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/03 15:11:15 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *list, void(*f)(void *))
+void	ft_lstiter(t_list *list, void (*f)(void *))
 {
 	if (list == NULL || f == NULL)
 		return ;

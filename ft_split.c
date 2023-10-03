@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:29:12 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/30 22:20:04 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/03 15:06:24 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,32 +107,3 @@ char	**ft_split(char const *str, char charset)
 	strings[word_index] = NULL;
 	return (strings);
 }
-
-// #include <stdio.h>
-
-// int	main()
-// {
-// 	int		index;
-// 	char	**split;
-
-// 	split = ft_split(" Tripouille ", ' ');
-// 	if (split == NULL)
-// 	{
-// 		free(split);
-// 		return (0);
-// 	}
-// 	index = 0;
-// 	while (split[index])
-// 	{
-// 		printf("%s\n", split[index]);
-// 		index++;
-// 	}
-// 	index = 0;
-// 	while (split[index])
-// 	{
-// 		free(split[index]);
-// 		index++;
-// 	}
-// 	free(split);
-// 	return (0);
-// }
