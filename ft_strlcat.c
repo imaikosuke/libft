@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 14:25:39 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/29 17:01:27 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/03 18:33:16 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	src_len = 0;
 	while (src[src_len] != '\0')
 		src_len++;
-	if (!dest)
+	if (!dest && size <= 0)
 		return (src_len);
 	while (dest[dest_len] != '\0')
 		dest_len++;
