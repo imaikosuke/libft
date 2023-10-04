@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: koimai <koimai@student.42.fr>              +#+  +:+       +#+         #
+#    By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 11:20:10 by koimai            #+#    #+#              #
-#    Updated: 2023/10/03 15:59:59 by koimai           ###   ########.fr        #
+#    Updated: 2023/10/04 11:08:00 by koimai           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,12 +46,6 @@ SRCS   = 	ft_isalpha.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c
 
-ifeq ($(MAKECMDGOALS),bonus)
-	SRCS += $(BONUS_SRCS)
-endif
-
-OBJS   = $(SRCS:.c=.o)
-
 BONUS_SRCS = ft_lstnew.c \
 			 ft_lstadd_front.c \
 			 ft_lstsize.c \
@@ -61,6 +55,12 @@ BONUS_SRCS = ft_lstnew.c \
 			 ft_lstclear.c \
 			 ft_lstiter.c \
 			 ft_lstmap.c \
+
+ifeq ($(MAKECMDGOALS),bonus)
+	SRCS += $(BONUS_SRCS)
+endif
+
+OBJS   = $(SRCS:.c=.o)
 
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
