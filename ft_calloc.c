@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:37:07 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/30 18:04:58 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/04 16:10:56 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (count == 0 || size == 0)
 		total_size = 1;
-	else if (SIZE_MAX / count < size)
+	else if (SIZE_MAX < count * size)
 		return (NULL);
 	else
 		total_size = count * size;
