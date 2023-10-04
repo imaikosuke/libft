@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:29:12 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/03 20:05:52 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/04 13:44:53 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ char	**ft_split(char const *str, char charset)
 	int			word_index;
 	char		**strings;
 
-	if (!str || !charset)
+	if (!str)
 		return (NULL);
 	word_index = 0;
 	strings = (char **)malloc((count_strings(str, charset) + 1)
@@ -109,20 +109,3 @@ char	**ft_split(char const *str, char charset)
 	strings[word_index] = NULL;
 	return (strings);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	char **expected = ft_split("\0aa\0bbb", '\0');
-
-// 	for (int i = 0; expected[i]; i++)
-// 	{
-// 		if (expected[i] != ((void *)0))
-// 		{
-// 			printf("FAILE");
-// 			return (0);
-// 		}
-// 	}
-// 	printf("SUCSSES");
-// 	return (0);
-// }
