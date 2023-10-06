@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+         #
+#    By: koimai <koimai@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 11:20:10 by koimai            #+#    #+#              #
-#    Updated: 2023/10/04 11:08:00 by koimai           ###   ########.fr        #
+#    Updated: 2023/10/06 17:49:34 by koimai           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME   = libft.a
+NAME   =	libft.a
 SRCS   = 	ft_isalpha.c \
 			ft_isdigit.c \
 			ft_isalnum.c \

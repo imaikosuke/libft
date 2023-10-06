@@ -3,24 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 12:09:45 by koimai            #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2023/10/05 18:34:22 by koimai           ###   ########.fr       */
-=======
-/*   Updated: 2023/10/06 09:29:30 by koimai           ###   ########.fr       */
->>>>>>> 58f30c4b034738e8de524b90460ecac273aa4eec
+/*   Updated: 2023/10/06 17:29:19 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-<<<<<<< HEAD
-static int	check_long(int flag, long num, int digit)
-=======
-int	check_long(int flag, long long num, int digit)
->>>>>>> 58f30c4b034738e8de524b90460ecac273aa4eec
+static int	check_long(int flag, long long num, int digit)
 {
 	if (flag == 1)
 	{
@@ -39,7 +31,7 @@ int	check_long(int flag, long long num, int digit)
 
 int	ft_atoi(const char *str)
 {
-	long long	result;
+	long	result;
 	int		flag;
 	size_t	i;
 
