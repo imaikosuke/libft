@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 19:47:32 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/04 13:56:16 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/05 18:52:19 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
+	size_t	i;
 
 	if (!s)
 		return ;

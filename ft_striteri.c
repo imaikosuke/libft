@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 19:40:55 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/26 19:51:27 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/05 18:54:35 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned int	i;
+	size_t	i;
 
 	if (s == NULL || f == NULL)
 		return ;

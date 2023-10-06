@@ -6,15 +6,15 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:29:12 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/04 13:44:53 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/05 18:59:22 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	free_str(char **strings)
+static void	free_str(char **strings)
 {
-	int	c;
+	size_t	c;
 
 	c = 0;
 	while (strings[c] == NULL)
@@ -25,10 +25,10 @@ void	free_str(char **strings)
 	free(strings);
 }
 
-int	count_strings(char const *str, char charset)
+static int	count_strings(char const *str, char charset)
 {
-	int	i;
-	int	count;
+	size_t	i;
+	size_t	count;
 
 	count = 0;
 	i = 0;
@@ -44,11 +44,11 @@ int	count_strings(char const *str, char charset)
 	return (count);
 }
 
-char	*ft_word(char const *str, char charset)
+static char	*ft_word(char const *str, char charset)
 {
-	int		len;
-	int		i;
-	char	*word;
+	size_t		len;
+	size_t		i;
+	char		*word;
 
 	len = 0;
 	while (str[len] && str[len] != charset)
@@ -66,9 +66,10 @@ char	*ft_word(char const *str, char charset)
 	return (word);
 }
 
-int	set_str(char const *str, char charset, char **strings, int *word_index)
+static int	set_str(char const *str, char charset, char **strings,
+		size_t *word_index)
 {
-	int			i;
+	size_t		i;
 	char const	*start;
 
 	i = 0;
@@ -91,8 +92,8 @@ int	set_str(char const *str, char charset, char **strings, int *word_index)
 
 char	**ft_split(char const *str, char charset)
 {
-	int			word_index;
-	char		**strings;
+	size_t	word_index;
+	char	**strings;
 
 	if (!str)
 		return (NULL);

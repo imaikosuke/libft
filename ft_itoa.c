@@ -6,50 +6,56 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 19:06:07 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/03 15:09:42 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/05 19:52:27 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_num(long int n)
+static size_t	count_num(int n, long n_aux)
 {
-	long int	count;
+	size_t	count;
 
-	count = 1;
-	while (10 <= n)
+	count = 0;
+	if (n == 0)
+		count = 1;
+	else
 	{
-		n /= 10;
-		count++;
+		while (n_aux != 0)
+		{
+			n_aux /= 10;
+			count++;
+		}
+		if (n < 0)
+			count++;
 	}
 	return (count);
 }
 
 char	*ft_itoa(int n)
 {
-	long int	n_aux;
-	int			len;
-	char		*res;
-	int			i;
+	long	n_aux;
+	size_t	len;
+	size_t	i;
+	char	*res;
 
 	n_aux = n;
 	if (n_aux < 0)
 		n_aux = -n_aux;
-	len = count_num(n_aux);
-	if (n < 0)
-		len++;
-	res = malloc(len + 1);
+	len = count_num(n, n_aux);
+	res = (char *)malloc((len + 1) * sizeof(char));
 	if (!res)
 		return (NULL);
-	res[len] = '\0';
-	i = len - 1;
-	while (0 <= i)
+	i = 0;
+	res[len - 1] = n_aux % 10 + '0';
+	while (n_aux != 0)
 	{
-		res[i] = (n_aux % 10) + '0';
+		res[len - 1 - i] = (n_aux % 10) + '0';
 		n_aux /= 10;
-		i--;
+		i++;
 	}
 	if (n < 0)
 		res[0] = '-';
+	res[len] = '\0';
 	return (res);
 }

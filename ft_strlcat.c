@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 14:25:39 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/04 17:20:09 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/05 18:55:00 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	n;
-	unsigned int	dest_len;
-	unsigned int	src_len;
+	size_t	n;
+	size_t	dest_len;
+	size_t	src_len;
 
 	dest_len = 0;
 	src_len = 0;

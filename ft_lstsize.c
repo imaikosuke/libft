@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 14:31:21 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/01 14:32:34 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/05 18:51:37 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *list)
 {
-	int	size;
+	size_t	size;
 
 	size = 0;
 	while (list != NULL)

@@ -6,15 +6,15 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:07:28 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/30 21:47:23 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/05 19:13:25 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_in_set(char c, char const *set)
+static int	is_in_set(char c, char const *set)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (set[i] != '\0')
@@ -28,9 +28,10 @@ int	is_in_set(char c, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		start;
-	int		end;
-	int		trimmed_len;
+	size_t	start;
+	size_t	end;
+	long	trimmed_len;
+	long	i;
 	char	*trimmed_str;
 
 	if (s1 == NULL || set == NULL)
@@ -47,9 +48,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed_str = (char *)malloc((trimmed_len + 1) * sizeof(char));
 	if (trimmed_str == NULL)
 		return (NULL);
-	end = -1;
-	while (++end < trimmed_len)
-		trimmed_str[end] = s1[start + end];
+	i = -1;
+	while (++i < trimmed_len)
+		trimmed_str[i] = s1[start + i];
 	trimmed_str[trimmed_len] = '\0';
 	return (trimmed_str);
 }

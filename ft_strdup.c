@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 14:15:20 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/03 15:06:33 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/05 18:54:27 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strdup(char *src)
 {
-	unsigned int	i;
-	unsigned int	len;
-	char			*duplicate;
+	size_t	i;
+	size_t	len;
+	char	*duplicate;
 
 	len = 0;
 	while (src[len] != '\0')

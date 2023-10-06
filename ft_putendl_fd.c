@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 10:54:51 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/04 13:56:40 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/05 18:52:06 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
+	size_t	i;
 
 	if (!s)
 		return ;

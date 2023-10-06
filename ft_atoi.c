@@ -6,13 +6,13 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 12:09:45 by koimai            #+#    #+#             */
-/*   Updated: 2023/09/30 12:35:54 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/05 18:34:22 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check_long(int flag, long num, int digit)
+static int	check_long(int flag, long num, int digit)
 {
 	if (flag == 1)
 	{
@@ -33,7 +33,7 @@ int	ft_atoi(const char *str)
 {
 	long	result;
 	int		flag;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	result = 0;

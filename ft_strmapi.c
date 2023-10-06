@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 19:07:03 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/04 13:53:42 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/05 18:55:28 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char			*result;
-	unsigned int	i;
-	unsigned int	len;
+	char	*result;
+	size_t	i;
+	size_t	len;
 
 	if (!s)
 		return (NULL);
