@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 19:06:07 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/05 19:52:27 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/10 10:20:22 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	count_num(int n, long n_aux)
+static size_t	count_num(int n, long abs_n)
 {
 	size_t	count;
 
@@ -21,9 +21,9 @@ static size_t	count_num(int n, long n_aux)
 		count = 1;
 	else
 	{
-		while (n_aux != 0)
+		while (abs_n != 0)
 		{
-			n_aux /= 10;
+			abs_n /= 10;
 			count++;
 		}
 		if (n < 0)
@@ -34,28 +34,29 @@ static size_t	count_num(int n, long n_aux)
 
 char	*ft_itoa(int n)
 {
-	long	n_aux;
+	long	abs_n;
 	size_t	len;
 	size_t	i;
 	char	*res;
 
-	n_aux = n;
-	if (n_aux < 0)
-		n_aux = -n_aux;
-	len = count_num(n, n_aux);
+	abs_n = n;
+	if (abs_n < 0)
+		abs_n = -abs_n;
+	len = count_num(n, abs_n);
 	res = (char *)malloc((len + 1) * sizeof(char));
 	if (!res)
 		return (NULL);
 	i = 0;
-	res[len - 1] = n_aux % 10 + '0';
-	while (n_aux != 0)
+	while (abs_n != 0)
 	{
-		res[len - 1 - i] = (n_aux % 10) + '0';
-		n_aux /= 10;
+		res[len - 1 - i] = (abs_n % 10) + '0';
+		abs_n /= 10;
 		i++;
 	}
 	if (n < 0)
 		res[0] = '-';
+	else if (n == 0)
+		res[0] = '0';
 	res[len] = '\0';
 	return (res);
 }

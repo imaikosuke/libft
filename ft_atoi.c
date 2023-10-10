@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 12:09:45 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/06 17:29:19 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/10 10:02:11 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ static int	check_long(int flag, long long num, int digit)
 
 int	ft_atoi(const char *str)
 {
-	long	result;
-	int		flag;
-	size_t	i;
+	long long	result;
+	int			flag;
+	size_t		i;
 
 	i = 0;
 	result = 0;
