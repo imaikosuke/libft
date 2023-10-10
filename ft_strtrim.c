@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:07:28 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/05 19:13:25 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/10 12:06:42 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 static int	is_in_set(char c, char const *set)
 {
-	size_t	i;
+	size_t	index;
 
-	i = 0;
-	while (set[i] != '\0')
+	index = 0;
+	while (set[index] != '\0')
 	{
-		if (set[i] == c)
+		if (set[index] == c)
 			return (1);
-		i++;
+		index++;
 	}
 	return (0);
 }

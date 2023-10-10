@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 10:54:51 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/05 18:52:06 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/10 12:01:47 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	i;
+	size_t	index;
 
 	if (!s)
 		return ;
-	i = 0;
-	while (s[i] != '\0')
+	index = 0;
+	while (s[index] != '\0')
 	{
-		write(fd, &s[i], 1);
-		i++;
+		write(fd, &s[index], 1);
+		index++;
 	}
 	write(fd, "\n", 1);
 }

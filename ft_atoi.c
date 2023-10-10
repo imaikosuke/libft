@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 12:09:45 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/10 10:02:11 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/10 11:58:11 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,27 +33,27 @@ int	ft_atoi(const char *str)
 {
 	long long	result;
 	int			flag;
-	size_t		i;
+	size_t		index;
 
-	i = 0;
+	index = 0;
 	result = 0;
 	flag = 1;
-	while (str[i] == ' ' || ('\t' <= str[i] && str[i] <= '\r'))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	while (str[index] == ' ' || ('\t' <= str[index] && str[index] <= '\r'))
+		index++;
+	if (str[index] == '-' || str[index] == '+')
 	{
-		if (str[i] == '-')
+		if (str[index] == '-')
 			flag *= -1;
-		i++;
+		index++;
 	}
-	while ('0' <= str[i] && str[i] <= '9')
+	while ('0' <= str[index] && str[index] <= '9')
 	{
-		if (check_long(flag, result, str[i]) == 1)
+		if (check_long(flag, result, str[index]) == 1)
 			return ((int)LONG_MAX);
-		else if (check_long(flag, result, str[i]) == -1)
+		else if (check_long(flag, result, str[index]) == -1)
 			return ((int)LONG_MIN);
-		result = (result * 10) + str[i] - '0';
-		i++;
+		result = (result * 10) + str[index] - '0';
+		index++;
 	}
 	return ((int)result * flag);
 }

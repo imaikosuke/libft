@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 14:15:20 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/05 18:54:27 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/10 11:37:33 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(char *src)
 	len = 0;
 	while (src[len] != '\0')
 		len++;
-	duplicate = malloc((len + 1) * sizeof(char));
+	duplicate = (char *)malloc((len + 1) * sizeof(char));
 	if (duplicate == NULL)
 		return (NULL);
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:11:20 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/01 22:56:15 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/10 11:58:37 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 void	ft_bzero(void *s, size_t n)
 {
 	char	*p;
-	size_t	i;
+	size_t	index;
 
 	p = s;
-	i = 0;
-	while (i < n)
+	index = 0;
+	while (index < n)
 	{
-		p[i] = 0;
-		i++;
+		p[index] = 0;
+		index++;
 	}
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:51:19 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/05 18:54:09 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/10 11:34:04 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	size_t	i;
-	size_t	len;
-	char	ch;
+	size_t			i;
+	size_t			len;
+	unsigned char	ch;
 
-	ch = (char)c;
+	ch = (unsigned char)c;
 	len = ft_strlen(str);
 	if (ch == '\0' && str[len] == ch)
 		return ((char *)&str[len]);

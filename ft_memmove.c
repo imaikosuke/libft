@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
+/*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:03:35 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/03 17:54:57 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/10 12:00:50 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 		return (NULL);
 	if (dest > src)
 	{
-		while (len-- != 0)
+		while (len--)
 			tmp[len] = s[len];
 	}
 	else
