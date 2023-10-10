@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:37:07 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/10 10:04:45 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/10 10:39:57 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	else
 		total_size = count * size;
-	dest = malloc(total_size + 1);
+	dest = malloc(total_size);
 	if (!dest)
 		return (NULL);
 	ft_bzero(dest, total_size);
