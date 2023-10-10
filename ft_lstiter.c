@@ -6,19 +6,19 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 14:50:50 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/03 15:11:15 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/10 16:59:30 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *list, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (list == NULL || f == NULL)
+	if (lst == NULL || f == NULL)
 		return ;
-	while (list != NULL)
+	while (lst != NULL)
 	{
-		f(list->content);
-		list = list->next;
+		f(lst->content);
+		lst = lst->next;
 	}
 }

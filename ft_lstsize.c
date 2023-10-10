@@ -6,21 +6,21 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 14:31:21 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/05 18:51:37 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/10 17:00:20 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *list)
+int	ft_lstsize(t_list *lst)
 {
 	size_t	size;
 
 	size = 0;
-	while (list != NULL)
+	while (lst != NULL)
 	{
 		size++;
-		list = list->next;
+		lst = lst->next;
 	}
 	return (size);
 }

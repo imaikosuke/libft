@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:29:12 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/10 15:53:26 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/10 16:55:47 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,19 +90,19 @@ static int	set_str(char const *str, char charset, char **strings,
 	return (0);
 }
 
-char	**ft_split(char const *str, char charset)
+char	**ft_split(char const *s, char c)
 {
 	size_t	word_index;
 	char	**strings;
 
-	if (!str)
+	if (!s)
 		return (NULL);
 	word_index = 0;
-	strings = (char **)malloc((count_strings(str, charset) + 1)
+	strings = (char **)malloc((count_strings(s, c) + 1)
 			* sizeof(char *));
 	if (strings == NULL)
 		return (NULL);
-	if (set_str(str, charset, strings, &word_index) == 1)
+	if (set_str(s, c, strings, &word_index) == 1)
 	{
 		free_str(strings);
 		return (NULL);

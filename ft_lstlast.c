@@ -6,17 +6,17 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 14:33:13 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/03 19:35:57 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/10 16:59:42 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *list)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (list == NULL)
+	if (lst == NULL)
 		return (NULL);
-	while (list->next != NULL)
-		list = list->next;
-	return (list);
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }
