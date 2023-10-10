@@ -6,7 +6,7 @@
 /*   By: koimai <koimai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 20:29:12 by koimai            #+#    #+#             */
-/*   Updated: 2023/10/05 18:59:22 by koimai           ###   ########.fr       */
+/*   Updated: 2023/10/10 15:53:26 by koimai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	free_str(char **strings)
 	size_t	c;
 
 	c = 0;
-	while (strings[c] == NULL)
+	while (strings[c] != NULL)
 	{
 		free(strings[c]);
 		c++;
